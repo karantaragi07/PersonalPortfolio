@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens per spec: light defaults on :root, dark overrides on .dark */
+:root {
+  --primary: #8c91ce;
+  --secondary: #2d2942;
+  --accent: #000000;
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --text: #111827;
+  --text-secondary: #6b7280;
+  --accent-red: #ff2d2d;
+  --hero-bg: #ffffff;
+  --hero-text: #111827;
+  --cta-bg: #111827;
+  --cta-text: #ffffff;
+}
+
+.dark {
+  --primary: #8c91ce;
+  --secondary: #2d2942;
+  --accent: #000000;
+  --bg: #211d26; /* match target site's dusky background */
+  --surface: #24203a;
+  --text: #ffffff;
+  --text-secondary: #cbd5e1;
+  --accent-red: #ff2d2d;
+  --hero-bg: #000000;
+  --hero-text: #ffffff;
+  --cta-bg: #ffffff;
+  --cta-text: #000000;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  /* Remove global snap to avoid jumpy modal scroll */
+  /* scroll-snap-type: y mandatory; */
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 500ms ease, color 500ms ease,
+    border-color 500ms ease;
+  @apply font-sans antialiased;
+}
+
+/* Hide global scrollbars */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container-narrow {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.card-surface {
+  background-color: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  @apply backdrop-blur rounded-xl shadow-glow;
+}
+
+.accent-gradient {
+  display: none;
+}
+
+.link-underline {
+  @apply underline decoration-accent/60 underline-offset-4 hover:decoration-accent transition;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  @apply inline-flex justify-center items-center gap-2 px-4 py-2 rounded-md font-semibold transition;
+}
+
+.btn-cta {
+  background-color: var(--cta-bg);
+  color: var(--cta-text);
+  @apply inline-flex justify-center items-center px-5 py-2 rounded-md font-semibold transition;
+}
+.btn-cta:hover {
+  transform: scale(1.03);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+.text-primary {
+  color: var(--primary);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--surface);
+}
+.border-primary {
+  border-color: var(--primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+:root {
+  --link-hover: #2d2942;
+}
+.dark {
+  --link-hover: #8c91ce;
+}
+.link-nav {
+  @apply transition-colors duration-300;
+}
+.link-nav:hover {
+  color: var(--link-hover);
+}
+
+.link-bulge {
+  transform: translateZ(0) scale(1);
+  transition: transform 250ms ease, color 200ms ease;
+}
+.link-bulge:hover {
+  transform: translateZ(0) scale(1.12);
+}
+
+.text-body {
+  color: var(--text);
+  transition: color 500ms ease;
+}
+
+.typing-text * {
+  color: var(--primary) !important;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Fix shadow and background reset */
+.card-surface {
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* Utility to hide scrollbars on specific containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animated grainy background layer similar to reference site */
+.bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background: var(--bg);
+}
+.bg-animated::after {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  opacity: 0.25;
+  /* Procedural noise: layered gradients */
+  background-image:
+    radial-gradient( circle at 10% 10%, rgba(255,255,255,0.02) 0.5px, transparent 0.6px ),
+    radial-gradient( circle at 60% 30%, rgba(255,255,255,0.02) 0.5px, transparent 0.6px ),
+    radial-gradient( circle at 30% 70%, rgba(0,0,0,0.03) 0.6px, transparent 0.7px ),
+    radial-gradient( circle at 80% 80%, rgba(255,255,255,0.02) 0.5px, transparent 0.6px );
+  background-size: 200px 200px, 180px 180px, 220px 220px, 160px 160px;
+  animation: bg-noise-move 0.8s steps(2) infinite;
+}
+
+@keyframes bg-noise-move {
+  0%   { transform: translate(0,0); }
+  10%  { transform: translate(-5%, -5%); }
+  20%  { transform: translate(-10%, 5%); }
+  30%  { transform: translate(5%, -10%); }
+  40%  { transform: translate(-5%, 15%); }
+  50%  { transform: translate(-10%, 5%); }
+  60%  { transform: translate(15%, 0); }
+  70%  { transform: translate(0, 10%); }
+  80%  { transform: translate(-15%, 0); }
+  90%  { transform: translate(10%, 5%); }
+  100% { transform: translate(5%, 0); }
+}
+
+/* Line clamp utility for certificate titles */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+

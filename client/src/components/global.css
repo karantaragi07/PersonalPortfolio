@@ -1,0 +1,19 @@
+.card-surface {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
+}
+
+.timeline-dot {
+  @apply absolute -left-1.5 md:-left-2 top-4;
+}
+
+.text-primary {
+  @apply text-gray-900 dark:text-white;
+}
+
+.text-secondary {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.bg-accent {
+  @apply bg-red-500 dark:bg-red-400;
+}

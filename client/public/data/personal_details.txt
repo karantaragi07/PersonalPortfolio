@@ -1,0 +1,6 @@
+Karan Taragi is a Spring Boot developer and DevOps enthusiast.
+He builds scalable, production-efficient systems and explores microservices, system design, cloud architecture, AI, and ML.
+Strengths: Java, Spring Boot, Kafka, Docker, Kubernetes, CI/CD, and problem solving.
+Location: India. Open to opportunities and collaboration.
+Contact prompt: Use the Latest Work button to view recent projects.
+

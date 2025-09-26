@@ -1,0 +1,42 @@
+Karan Taragi
+Email: ksingh064002@gmail.com | Phone: +91-8077879481 | GitHub: karantaragi07 | LinkedIn: karantaragi26
+
+Work Experience:
+Tata Consultancy Services (TCS), Mumbai, Maharashtra
+Graduate Trainee | Multi Commodity Exchange Of India (Client Office) Aug 2024 - Jun 2025
+- Developed Spring Boot API with IBM Db2 to track T7 FIXML trade latency, improving monitoring accuracy.
+- Implemented latency percentile calculations and SLA compliance tracking, increasing system uptime by 15%.
+- Analyzed OpenShift RMS microservices logs and pod health metrics, cutting incident resolution time by 20%.
+- Optimized backend workflows and tested APIs with Postman, reducing response time by 200ms.
+Skills: SpringBoot, IBM Db2, Apache Kafka, OpenShift, FeignClient, Postman, Microservices, RESTful APIs.
+
+Training Project: MindStone – TCS Initial Training
+- Automated deployments with Docker, ensuring consistent runtime environments.
+- Built CI/CD pipelines with Jenkins and GitHub Actions for authentication APIs, shortening release cycles by 30%.
+- Secured MongoDB with automated backups, improving reliability.
+- Monitored container health and logs, improving issue detection by 20%.
+Skills: Docker, CI/CD (Jenkins/GitHub Actions), MongoDB, React, Django, Postman, Agile.
+
+Education:
+Graphic Era Hill University, Aug 2021 - Jun 2024
+Bachelor of Computer Applications.
+
+Projects:
+Smart Email Assistant – Jul 2025 - Aug 2025
+- Spring Boot backend to process emails, containerized with Docker, integrated Google Gemini API.
+- Implemented CI/CD pipelines (Jenkins, GitHub Actions) for zero downtime.
+- Added observability (logging, monitoring, alerting) to increase reliability.
+Skills: Docker, CI/CD, Spring Boot 3, Google Gemini API, Chrome Extension, REST APIs, Maven, Git.
+
+SkillMatch – Resume Parsing & Role Matching API – Feb 2025 - Mar 2025
+- Spring Boot application with Java 17 and MongoDB for resume parsing and job compatibility scoring.
+- Built resume parsing API with Apache PDFBox, reducing manual screening effort by 40%.
+- Containerized with Docker, implemented CI/CD pipelines, integrated AWS services for scalability.
+Skills: Spring Boot, Java 17, MongoDB, Apache PDFBox, Docker, Jenkins, GitHub Actions, Maven, Git, AWS.
+
+Technical Skills:
+DevOps & Cloud: Docker, Kubernetes, Jenkins, AWS.
+Backend Development: Spring Boot, RESTful APIs, Django.
+Databases: MongoDB, MySQL, IBM Db2.
+Version Control & Build Tools: Git, Maven, GitHub Actions.
+Additional Tools & Concepts: Java, Python, Microservices, Postman, Swagger UI, Agile, Linux.

@@ -1,0 +1,5 @@
+Karan Taragi — Backend & DevOps engineer.
+Latest work: Built Spring Boot APIs for FIXML latency tracking on the Multi Commodity Exchange project (TCS), integrated with IBM Db2; improved uptime by ~15% and reduced downtime incidents; optimized flows to lower average API response time by ~200ms.
+Skills: Java, Spring Boot, Kafka, Docker, Kubernetes, GitHub Actions, Jenkins, AWS, GCP, PostgreSQL, MySQL, MongoDB, Redis, IBM Db2.
+Projects: SenseFlow (sensor data pipeline using Spring Boot, Kafka, PostgreSQL, Docker Compose), BlogPost (RESTful blogging app with MongoDB), Email-Assistant (AI email helper with Gemini + Chrome Extension), Hospital-Management-System (microservices with Spring Boot and MongoDB), GameHub (UI/UX in Figma).
+Education: Bachelor’s degree (details as applicable).
