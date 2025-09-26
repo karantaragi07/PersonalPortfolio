@@ -4,11 +4,15 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: Number(process.env.PORT) || 5173,
     host: true,
-    allowedHosts: [
-      "portfolio-frontend-3dkb.onrender.com",
-      ".onrender.com", // allow all render domains
-    ],
+    port: 5173,
+    allowedHosts: ["portfolio-frontend-3dkb.onrender.com"],
+    proxy: {
+      "/api": {
+        target: "https://portfolio-backend-0rld.onrender.com",
+        changeOrigin: true,
+        secure: true,
+      },
+    },
   },
 });
