@@ -9,6 +9,8 @@ import SectionAnimation from "./components/SectionAnimation";
 import ProjectCard from "./components/ProjectCard";
 import CertificatesSection from "./components/CertificatesSection";
 
+const backendUrl = "https://portfolio-backend-0rld.onrender.com";
+
 export default function App() {
   const myPhoto = "/images/myPhoto.jpg"; // Fixed path
   const dummyImage = "/images/myPhoto.jpg"; // Fixed path
@@ -123,7 +125,7 @@ export default function App() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${backendURL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -288,8 +290,8 @@ export default function App() {
   useEffect(() => {
     async function incrementAndFetch() {
       try {
-        await fetch("/api/views/increment", { method: "POST" });
-        const res = await fetch("/api/views");
+        await fetch(`${backendUrl}/api/views/increment`, { method: "POST" });
+        const res = await fetch(`${backendUrl}/api/views`);
         const data = await res.json();
         if (typeof data.count === "number") setViews(data.count);
       } catch (e) {}
