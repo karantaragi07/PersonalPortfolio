@@ -6,5 +6,9 @@ export default defineConfig({
   server: {
     port: Number(process.env.PORT) || 5173,
     host: true,
+    allowedHosts: [
+      "portfolio-frontend-3dkb.onrender.com",
+      ".onrender.com", // allow all render domains
+    ],
   },
 });
