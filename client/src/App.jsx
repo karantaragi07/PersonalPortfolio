@@ -125,7 +125,7 @@ export default function App() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
     try {
-      const res = await fetch(`${backendURL}/api/contact`, {
+      const res = await fetch(`${backendUrl}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
